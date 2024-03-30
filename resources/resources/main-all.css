@@ -1,0 +1,96 @@
+#panda-debugger {
+  position: fixed;
+    bottom: 0;
+    right: 24px;
+    width: unset;
+  }
+#panda-debugger.expanded {
+  position: fixed;
+    bottom: 0;
+    right: 24px;
+    width: 350px;
+  
+  }
+#panda-debugger #debugger-content, #panda-debugger #debugger-tabs {
+  display: none;
+}
+#panda-debugger.expanded #debugger-tabs{
+  display: block;
+}
+.debugger-page{
+display: none;
+}
+.debugger-page.active {
+display: block;
+}
+#panda-debugger #debugger-tabs {
+  background: #fdfdfd;
+    padding: 5px;
+    border: 1px solid #e6e6e6;
+  }
+#panda-debugger.expanded #debugger-content {
+  display: block;
+  background: white;
+    padding: 5px;
+    border: 1px solid #e6e6e6;
+}
+#panda-debugger.expanded #expand-arrow::after {
+  content: "\25B2";
+}
+.error-message {color: red}
+#panda-debugger #expand-arrow::after {
+  content: "\25BC";
+}
+#panda-debugger #expand-arrow {
+  float: right;
+    margin-left: 5px;
+}
+#panda-debugger-header-content {
+    color: white;
+  }
+#panda-debugger .flag-checkbox, #panda-debugger .flag-title {display: inline}
+#panda-debugger #error-count {
+padding-right: 7px;
+    padding-left: 7px;
+    background: linear-gradient(0deg, rgba(20,135,0,1) 0%, rgba(13,213,0,1) 100%);
+    padding-top: 2px;
+    padding-bottom: 2px;
+  border-radius: 2px;
+}
+#panda-debugger #error-count.error {
+padding-right: 7px;
+    padding-left: 7px;
+    background: linear-gradient(0deg, rgba(135,0,0,1) 0%, rgba(213,0,0,1) 100%);
+    padding-top: 2px;
+    padding-bottom: 2px;
+  color: white
+}
+#panda-debugger #debugger-header {
+  background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(70,70,70,1) 100%);
+    padding: 10px;
+    cursor: pointer;
+  }
+#panda-debugger #error-count-text {display: none}
+#panda-debugger.expanded #error-count-text {display: inline-block}
+
+
+
+
+
+
+
+.slui_status + #panda-debugger, div[style*="display:block!important"] + #panda-debugger {
+    right: 180px !important;
+}
+.video-extras-sparkbar-dislikes {
+    float: right;
+    height: 4px;
+    margin-right: -1px;
+    background: #c00;
+}
+.video-extras-sparkbar-likes {
+    float: left;
+    height: 4px;
+    border-right: 1px solid #fff;
+    background: #060;
+}
