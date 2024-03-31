@@ -649,7 +649,7 @@ body {
     height: 200%;
     top: -50%;
     left: calc(var(--progress-position) * 99.6%);
-    background: url(https://i.ibb.co/Q8hvChj/scrubber.png);
+    background: no-repeat url(http://s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -38px -233px;
     background-size: 100% 100%;
     border-radius: 50%;
     z-index: 999999999;
