@@ -239,7 +239,7 @@
 }
 
 .html5-share-button .yt-uix-button-icon {
-    background: no-repeat url(http://s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -28px -68px;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -28px -68px;
     width: 22px;
     height: 23px;
     margin-top: 3px;
@@ -637,7 +637,7 @@ body {
     top: 0;
     bottom: 0;
     right: calc(100% - var(--progress-position) * 100%);
-    background-color: linear-gradient(to bottom,#c00 0,#600 100%);
+    background: linear-gradient(to bottom,#c00 0,#600 100%);
 }
 
 .old-player .timeline::after {
@@ -649,12 +649,16 @@ body {
     height: 200%;
     top: -50%;
     left: calc(var(--progress-position) * 99.6%);
-    background: no-repeat url(http://s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -38px -233px;
-    background-size: 100% 100%;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -39px -234px;
     border-radius: 50%;
     z-index: 999999999;
     aspect-ratio: 1 / 1;
     margin-right: 15px;
+}
+
+.timeline .thumb-indicator:hover {
+  background: no-repeat url(//s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -1px -98px;
+  
 }
 
 .volume-slider::before {
@@ -678,11 +682,6 @@ body {
 
 .old-player .timeline .thumb-indicator:hover {
     background: no-repeat url(https://s.ytimg.com/yts/imgbin/player-common-vfloYYly0.png) -1px -98px
-}
-
-.timeline .thumb-indicator:hover {
-    background: url(https://i.ibb.co/DpjxCgq/scrubber.png);
-    background-size: 100% 100%;
 }
 
 .timeline .preview-img {
@@ -764,7 +763,7 @@ body {
 }
 
 .play-icon {
-    background: no-repeat url(https://s.ytimg.com/yts/imgbin/player-common-vflbJjZA5.png) 0 -545px;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/player-dark-vfllzTuHQ.png) -96px -231px;
     background-size: auto;
     width: 100%;
     height: 100%;
@@ -790,7 +789,7 @@ body {
 }
 
 .pause-icon {
-    background: no-repeat url(https://s.ytimg.com/yts/imgbin/player-common-vflbJjZA5.png) 0 -638px;
+    background: no-repeat url(http://s.ytimg.com/yts/imgbin/player-dark-vfllzTuHQ.png) -64px -177px;
     background-size: auto;
     width: 100%;
     height: 100%;
