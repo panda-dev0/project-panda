@@ -382,14 +382,10 @@ video {
     color: white;
     z-index: 100;
     opacity: 0;
-    background: rgb(27, 27, 27);
     transition: opacity 150ms ease-in-out;
 }
 
-.old-player .controls {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAdCAYAAABrAQZpAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAABAAAAHQAh4gKwAAAAMUlEQVQI12OQlJD4x2Sgr8/I9OTZs5dM//79Y2T6//8/IyqLAcLClEBjYahDKCHSKADN5VNQpdTxzgAAAABJRU5ErkJggg==);
-    background-repeat: repeat-x;
-}
+
 
 .video-controls-container::before {
     content: "";
@@ -416,6 +412,9 @@ video {
     height: 27px;
     padding: unset;
     align-items: center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAdCAYAAABrAQZpAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAABAAAAHQAh4gKwAAAAMUlEQVQI12OQlJD4x2Sgr8/I9OTZs5dM//79Y2T6//8/IyqLAcLClEBjYahDKCHSKADN5VNQpdTxzgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+
 }
 
 .video-controls-container .controls button {
@@ -609,7 +608,7 @@ body {
 }
 
 .timeline {
-    background-color: #444;
+    background-color: #1e1f1f;
     height: 7px;
     width: 100%;
     position: relative
