@@ -637,7 +637,7 @@ body {
     top: 0;
     bottom: 0;
     right: calc(100% - var(--progress-position) * 100%);
-    background-color: rgb(185, 31, 31);
+    background-color: linear-gradient(to bottom,#c00 0,#600 100%);
 }
 
 .old-player .timeline::after {
