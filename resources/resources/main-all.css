@@ -78,7 +78,10 @@ padding-right: 7px;
 
 
 
-
+.emoji {
+    margin: 0 2px 3px;
+    vertical-align: middle;
+}
 .slui_status + #panda-debugger, div[style*="display:block!important"] + #panda-debugger {
     right: 180px !important;
 }
