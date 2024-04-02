@@ -17,7 +17,26 @@
     position: absolute;
 }
 
-
+.ytp-time-live-badge:before {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    background: #b3362d;
+    content: '';
+    border-radius: 6px;
+}
+.ytp-time-live-badge {
+    display: none
+}
+.live .ytp-time-live-badge {
+    display: block;
+    margin-left: 8px;
+    padding: 1px 4px;
+    line-height: 1;
+    font-size: 10px;
+    color: #fff;
+}
 /* https://s.ytimg.com/yts/imgbin/player-common-vflbJjZA5.png */
 
 .ytp-button-watch-later {
