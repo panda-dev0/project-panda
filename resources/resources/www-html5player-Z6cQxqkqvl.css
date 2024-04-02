@@ -16,7 +16,9 @@
     left: 17px;
     position: absolute;
 }
-
+.html5-live-indicator {
+display: none
+}
 /* https://s.ytimg.com/yts/imgbin/player-common-vflbJjZA5.png */
 
 .ytp-button-watch-later {
