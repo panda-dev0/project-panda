@@ -17,7 +17,7 @@
     position: absolute;
 }
 
-.ytp-time-live-badge:before {
+.html5-live-indicator:before {
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -26,10 +26,10 @@
     content: '';
     border-radius: 6px;
 }
-.ytp-time-live-badge {
+.html5-live-indicator {
     display: none
 }
-.live .ytp-time-live-badge {
+.live .html5-live-indicator {
     display: block;
     margin-left: 8px;
     padding: 1px 4px;
