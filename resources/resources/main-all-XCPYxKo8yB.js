@@ -27,7 +27,7 @@ function checkConsoleErrors() {
   var consoleErrors = [];
 
   // Monitor for errors in the console
-  window.addEventListener('error', function (event) {
+   window.onerror = function(errorMessage, scriptURL, lineNumber, columnNumber, errorObj) {
     // Extract error details
     var errorMessage = event.message;
     var scriptURL = event.filename || '[unknown]';
@@ -55,7 +55,7 @@ document.getElementById("error-count").classList.add('error')
     errorElement.classList.add('error-message');
     errorElement.textContent = errorMessageWithLocation;
     debuggerContent.appendChild(errorElement);
-  });
+  };
 
   // Function to clear errors in the debugger
   /*document.getElementById("clear-errors").addEventListener('click', function () {
