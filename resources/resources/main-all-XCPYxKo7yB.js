@@ -125,7 +125,7 @@ function createCheckboxes() {
         console.error('Error fetching data:', error);
     });
 }
-
+waitForElm('#config-list').then((e) => { createCheckboxes(); })
 // Call the function to create checkboxes
 
       
