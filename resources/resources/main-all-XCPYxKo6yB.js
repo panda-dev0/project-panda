@@ -27,12 +27,16 @@ function checkConsoleErrors() {
   var consoleErrors = [];
 
   // Monitor for errors in the console
-   window.onerror = function(errorMessage, scriptURL, lineNumber, columnNumber, errorObj) {
+  window.addEventListener('error', function (event) {
     // Extract error details
     var errorMessage = event.message;
     var scriptURL = event.filename || '[unknown]';
     var lineNumber = event.lineno || '[unknown]';
 
+    // Ignore errors from "desktop_polymer.js"
+    if (errorMessage.includes('desktop_polymer.js') || scriptURL.includes('desktop_polymer.js')) {
+      return;
+    }
 
     // Increment error count
     errorCount++;
@@ -42,20 +46,7 @@ function checkConsoleErrors() {
 
     // Add error message to the list
     consoleErrors.push(errorMessageWithLocation);
-
-    // Update error count in the debugger header
-    document.getElementById("error-count").innerText = errorCount;
-document.getElementById("error-count").classList.add('error')
-  var debuggerElem = document.getElementById("panda-debugger");
-    debuggerElem.classList.add("expanded");
-    _panda_showPage('errors')
-    // Add error message to the debugger content
-    var debuggerContent = document.getElementById("errors-list");
-    var errorElement = document.createElement('div');
-    errorElement.classList.add('error-message');
-    errorElement.textContent = errorMessageWithLocation;
-    debuggerContent.appendChild(errorElement);
-  };
+  });
 
   // Function to clear errors in the debugger
   /*document.getElementById("clear-errors").addEventListener('click', function () {
