@@ -33,10 +33,6 @@ function checkConsoleErrors() {
     var scriptURL = event.filename || '[unknown]';
     var lineNumber = event.lineno || '[unknown]';
 
-    // Ignore errors from "desktop_polymer.js"
-    if (errorMessage.includes('desktop_polymer.js') || scriptURL.includes('desktop_polymer.js')) {
-      return;
-    }
 
     // Increment error count
     errorCount++;
