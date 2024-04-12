@@ -25,18 +25,14 @@ function _panda_showPage(pageId) {
 function checkConsoleErrors() {
   var errorCount = 0;
   var consoleErrors = [];
-
+var errorsList = document.getElementById('errors-list');
   // Monitor for errors in the console
   window.addEventListener('error', function (event) {
     // Extract error details
+    console.log('Error event:', event);
     var errorMessage = event.message;
     var scriptURL = event.filename || '[unknown]';
     var lineNumber = event.lineno || '[unknown]';
-
-    // Ignore errors from "desktop_polymer.js"
-    if (errorMessage.includes('desktop_polymer.js') || scriptURL.includes('desktop_polymer.js')) {
-      return;
-    }
 
     // Increment error count
     errorCount++;
@@ -46,6 +42,8 @@ function checkConsoleErrors() {
 
     // Add error message to the list
     consoleErrors.push(errorMessageWithLocation);
+errorsList.innerHTML = consoleErrors.join('<br>');
+    
   });
 
   // Function to clear errors in the debugger
