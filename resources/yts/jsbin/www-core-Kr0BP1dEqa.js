@@ -23132,7 +23132,37 @@ function DDDscreen() {
     if (feedid === '') {
         feedid = '0'
     }
-    var dddinithtml = '<div class="ddd-screen yellow-text shadow_text"><div class="ddd_second_line"><span class="feed_id_cont">FeedID: <p class="feed_id">${feedid}</p></span><span class="search_id_cont">SearchID: <p class="search_id">${searchid}</p></span><span class="video_id_cont">VideoID: <p class="video_id">${videoid}</p></span><span class="ddd_nav_info&quot;">NavigationCount: <p class="ddd_nav_count">0</p>, Errors: <p class="ddd_err">0</p></span><span>ElementBuilder: <p class="element_bld_count">${elementCount}</p></span></div></div>'
+    var dddinithtml = `
+    <style>
+    .ddd-screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 2147483647;
+        padding: 10px;
+    }
+    .yellow-text {
+        color: yellow;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .ddd-screen.shadow_text span {
+        text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    }
+    .ddd-screen span:after {
+        content: ' ';
+    }
+    .ddd-screen span p {
+        display: inline-block;
+    }
+    </style>
+    
+    
+    
+    <div class="ddd-screen yellow-text shadow_text"><div class="ddd_second_line"><span class="feed_id_cont">FeedID: <p class="feed_id">${feedid}</p></span><span class="search_id_cont">SearchID: <p class="search_id">${searchid}</p></span><span class="video_id_cont">VideoID: <p class="video_id">${videoid}</p></span><span class="ddd_nav_info&quot;">NavigationCount: <p class="ddd_nav_count">0</p>, Errors: <p class="ddd_err">0</p></span><span>ElementBuilder: <p class="element_bld_count">${elementCount}</p></span></div></div>`
     document.body.innerHTML += dddinithtml
 }
 Panda.document.utils.waitForElm('#panda-debugger').then(a => {
